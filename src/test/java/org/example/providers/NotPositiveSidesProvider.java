@@ -1,0 +1,15 @@
+package org.example.providers;
+
+import org.example.Triangle;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsProvider;
+
+import java.util.stream.Stream;
+
+public class NotPositiveSidesProvider implements ArgumentsProvider {
+    @Override
+    public Stream<? extends Arguments> provideArguments(ExtensionContext extensionContext) throws Exception {
+        return Stream.of(Arguments.of(new Triangle(0,3,10)), Arguments.of(new Triangle(-1,5,10)));
+    }
+}
