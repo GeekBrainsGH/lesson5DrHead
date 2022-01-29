@@ -26,7 +26,7 @@ public class AddToCartTest extends BaseTest{
 
     @DisplayName("Add to cart: positive")
     @ParameterizedTest
-    @ValueSource(strings = {"Sony DLC-HX10"})
+    @ValueSource(strings = {"Sony MDR-7506"})
     void addToCartTest(String productName) throws InterruptedException {
 
         webDriver.get("https://doctorhead.ru/");
